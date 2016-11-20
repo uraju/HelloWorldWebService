@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.etools.webservice.wscbnd:ClientBinding xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.etools.webservice.wscbnd="http://www.ibm.com/websphere/appserver/schemas/5.0.2/wscbnd.xmi" xmi:id="ClientBinding_1479678165193">
+  <serviceRefs xmi:id="ServiceRef_1479678165194" serviceRefLink="service/HelloWorldService">
+    <portQnameBindings xmi:id="PortQnameBinding_1479678165194" portQnameNamespaceLink="http://acme.org/wsdl" portQnameLocalNameLink="HelloWorldPort" overriddenEndpointURI="http://localhost:9081/helloWorld/HelloWorldService"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1479678372350" serviceRefLink="service/HelloWorld2Service">
+    <portQnameBindings xmi:id="PortQnameBinding_1479678372350" portQnameNamespaceLink="http://next.ws.acme.org/" portQnameLocalNameLink="HelloWorld2Port" overriddenEndpointURI="http://localhost:9081/helloWorld/HelloWorld2Service"/>
+  </serviceRefs>
+  <serviceRefs xmi:id="ServiceRef_1479678814764" serviceRefLink="service/CalculatorService">
+    <portQnameBindings xmi:id="PortQnameBinding_1479678814764" portQnameNamespaceLink="http://acme.org/wsdl" portQnameLocalNameLink="CalculatorPort" overriddenEndpointURI="http://localhost:9081/helloWorld/CalculatorService"/>
+  </serviceRefs>
+</com.ibm.etools.webservice.wscbnd:ClientBinding>

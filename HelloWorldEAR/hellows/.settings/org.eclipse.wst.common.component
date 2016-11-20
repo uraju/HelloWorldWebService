@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="hellows">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="helloWorld.war" deploy-path="/" handle="module:/resource/helloWorld/helloWorld">
+            <dependent-object>Module_1479562856545</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="helloWorldClient.war" deploy-path="/" handle="module:/resource/helloWorldClient/helloWorldClient">
+            <dependent-object>Module_1479562856546</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

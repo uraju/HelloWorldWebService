@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://next.ws.acme.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HelloWorld2Service" targetNamespace="http://next.ws.acme.org/">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://next.ws.acme.org/" schemaLocation="HelloWorld2Service_schema1.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="helloNameResponse">
+    <part element="tns:helloNameResponse" name="parameters">
+    </part>
+  </message>
+  <message name="helloName">
+    <part element="tns:helloName" name="parameters">
+    </part>
+  </message>
+  <portType name="HelloWorld2">
+    <operation name="helloName">
+      <input message="tns:helloName" wsam:Action="http://next.ws.acme.org/HelloWorld2/helloNameRequest">
+    </input>
+      <output message="tns:helloNameResponse" wsam:Action="http://next.ws.acme.org/HelloWorld2/helloNameResponse">
+    </output>
+    </operation>
+  </portType>
+  <binding name="HelloWorld2PortBinding" type="tns:HelloWorld2">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="helloName">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="HelloWorld2Service">
+    <port binding="tns:HelloWorld2PortBinding" name="HelloWorld2Port">
+      <soap:address location="http://localhost:9081/helloWorld/HelloWorld2Service"/>
+    </port>
+  </service>
+</definitions>
